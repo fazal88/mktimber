@@ -60,6 +60,7 @@ flutter:
 
   assets:
     - assets/logo1.jpeg
+    - assets/logo11.png
     - assets/logo2.jpeg
     - assets/banner1.jpeg
     - assets/banner2.jpeg

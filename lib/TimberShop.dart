@@ -353,11 +353,26 @@ class TimberShop extends StatelessWidget {
               ),
 
 
-
-
               Container(
                 padding: EdgeInsets.all(20),
                 child: Row(children: [
+                  Expanded(
+                    flex:1,
+                      child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Container(
+                          width: double.infinity,
+                          height: 300,
+                          color: Colors.black,
+                          child:   Image.network('https://maps.googleapis.com/maps/api/staticmap?center=18.9658861,72.8233187&zoom=16&size=96000x3000&key=AIzaSyBjFqeHTgDKdst84R2Qw5T3BDbcUYq91Bg', fit: BoxFit.cover,)
+                      ),
+                      Image.asset(
+                        'assets/logo11.png',
+                        fit: BoxFit.cover,
+                        height: 40, width: 40,
+                      )
+                    ],)),
                   Expanded(
                       flex : 1,
                       child: Container(
@@ -365,12 +380,15 @@ class TimberShop extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text('संपर्क करें:'),
-                        Text('+91-93210 25334', style: TextStyle(
+                        Text('संपर्क करें:', style: TextStyle(
+                            fontWeight: FontWeight.bold)),
+                        Text('+91 93210 25334', style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold),),
-                        Text('दुकान नंबर 61/सी, नागो सैयाची चॉल, निमकर मार्ग'),
-                        Text('दलाल एस्टेट के पास, मुंबई, महाराष्ट्र 400008'),
+                        Text('दुकान नंबर 61/सी, नागो सैयाची चॉल, निमकर मार्ग', style: TextStyle(
+                          fontSize: 14,color: Colors.grey,)),
+                        Text('दलाल एस्टेट के पास, मुंबई, महाराष्ट्र 400008', style: TextStyle(
+                          fontSize: 14,color: Colors.grey,)),
                       ],
                     ),
                   )),
@@ -379,9 +397,9 @@ class TimberShop extends StatelessWidget {
                       child: Column(
                     children: [
                       Image.asset(
-                        'assets/logo1.jpeg',
+                        'assets/logo11.png',
                         fit: BoxFit.cover,
-                        height: 200, width: 200,
+                        height: 150, width: 150,
                       )
                     ],
                   )),
@@ -392,12 +410,15 @@ class TimberShop extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Contact Us at:'),
-                        Text('+91-96648 29978', style: TextStyle(
+                        Text('Contact Us at:', style: TextStyle(
+                            fontWeight: FontWeight.bold)),
+                        Text('+91 96648 29978', style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold),),
-                        Text('Shop No. 61/C, Nago Saiyaachi Chawl, Nimkar Marg'),
-                        Text('near Dalal Estate, Mumbai, Maharashtra 400008'),
+                        Text('Shop No. 61/C, Nago Saiyaachi Chawl, RS Nimkar Marg', style: TextStyle(
+                            fontSize: 14,color: Colors.grey,)),
+                        Text('near Dalal Estate, Mumbai, Maharashtra 400008', style: TextStyle(
+                            fontSize: 14,color: Colors.grey,)),
                       ],
                     ),
                   )),
@@ -405,7 +426,7 @@ class TimberShop extends StatelessWidget {
               ),
               Text('© Copyright 2024 MK Timber & Traders Developed By Eftychia Technologies'),
               SizedBox(
-                height: 100,
+                height: 20,
               )
             ],
           ),
