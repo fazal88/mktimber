@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TimberShop extends StatelessWidget {
   TimberShop({super.key});
@@ -343,7 +344,15 @@ class TimberShop extends StatelessWidget {
                     Expanded(
                       child: Column(
                         children: [
-                          Image.asset('assets/woods.png')
+                          GestureDetector(
+                              onTap:() async {
+                                String url ='https://www.google.com/maps/place/M.+K.+Timber+Traders/@18.9659052,72.8227851,18z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce6b39dae30d:0x1acde0eb16200a60!8m2!3d18.9659052!4d72.8240595!16s%2Fg%2F1pty4zzqr?authuser=3&entry=ttu';
+                                final Uri uri = Uri.parse(url);
+                                if (!await launchUrl(uri, mode: LaunchMode.platformDefault)) {
+                                  throw Exception('Could not launch $uri');
+                                }
+                              },
+                              child: Image.asset('assets/woods.png'))
                         ],
                       ),
                       flex: 4,
@@ -354,29 +363,26 @@ class TimberShop extends StatelessWidget {
 
 
               Container(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.only(left: 20),
                 child: Row(children: [
                   Expanded(
-                    flex:1,
+                    flex:12,
                       child: Stack(
                     alignment: Alignment.center,
                     children: [
-                      Container(
-                          width: double.infinity,
-                          height: 300,
-                          color: Colors.black,
-                          child:   Image.network('https://maps.googleapis.com/maps/api/staticmap?center=18.9658861,72.8233187&zoom=16&size=96000x3000&key=AIzaSyBjFqeHTgDKdst84R2Qw5T3BDbcUYq91Bg', fit: BoxFit.cover,)
-                      ),
-                      Image.asset(
-                        'assets/logo11.png',
-                        fit: BoxFit.cover,
-                        height: 40, width: 40,
+                      Image.network('https://maps.googleapis.com/maps/api/staticmap?center=18.9658861,72.8233187&zoom=16&size=96000x400&key=AIzaSyBjFqeHTgDKdst84R2Qw5T3BDbcUYq91Bg', fit: BoxFit.cover,),
+                      ClipOval(
+                        child: Image.asset(
+                          'assets/logo11.png',
+                          fit: BoxFit.cover,
+                          height: 40, width: 40,
+                        ),
                       )
                     ],)),
                   Expanded(
-                      flex : 1,
+                      flex : 10,
                       child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        padding: EdgeInsets.only(right: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
@@ -399,14 +405,14 @@ class TimberShop extends StatelessWidget {
                       Image.asset(
                         'assets/logo11.png',
                         fit: BoxFit.cover,
-                        height: 150, width: 150,
+                        height: 120, width: 120,
                       )
                     ],
                   )),
                   Expanded(
-                      flex : 1,
+                      flex : 10,
                       child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        padding: EdgeInsets.only(left: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -415,7 +421,7 @@ class TimberShop extends StatelessWidget {
                         Text('+91 96648 29978', style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold),),
-                        Text('Shop No. 61/C, Nago Saiyaachi Chawl, RS Nimkar Marg', style: TextStyle(
+                        Text('Shop no.61/C, Nago Saiyaachi Chawl, Nimkar Marg', style: TextStyle(
                             fontSize: 14,color: Colors.grey,)),
                         Text('near Dalal Estate, Mumbai, Maharashtra 400008', style: TextStyle(
                             fontSize: 14,color: Colors.grey,)),
@@ -424,7 +430,10 @@ class TimberShop extends StatelessWidget {
                   )),
                 ],),
               ),
-              Text('© Copyright 2024 MK Timber & Traders Developed By Eftychia Technologies'),
+              SizedBox(
+                height: 20,
+              ),
+              Text('© Copyright 2024 MK Timber Traders Website Developed By Eftychia Technologies PVT LTD', style: TextStyle(color: Colors.grey),),
               SizedBox(
                 height: 20,
               )
