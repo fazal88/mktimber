@@ -354,10 +354,9 @@ class TimberShop extends StatelessWidget {
 
 
               Container(
-                padding: EdgeInsets.all(20),
                 child: Row(children: [
                   Expanded(
-                    flex:1,
+                    flex:3,
                       child: Stack(
                     alignment: Alignment.center,
                     children: [
@@ -374,55 +373,51 @@ class TimberShop extends StatelessWidget {
                       )
                     ],)),
                   Expanded(
-                      flex : 1,
-                      child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text('संपर्क करें:', style: TextStyle(
-                            fontWeight: FontWeight.bold)),
-                        Text('+91 93210 25334', style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold),),
-                        Text('दुकान नंबर 61/सी, नागो सैयाची चॉल, निमकर मार्ग', style: TextStyle(
-                          fontSize: 14,color: Colors.grey,)),
-                        Text('दलाल एस्टेट के पास, मुंबई, महाराष्ट्र 400008', style: TextStyle(
-                          fontSize: 14,color: Colors.grey,)),
-                      ],
-                    ),
-                  )),
-                  Expanded(
-                      flex : 0,
+                    flex: 2,
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset(
-                        'assets/logo11.png',
-                        fit: BoxFit.cover,
-                        height: 150, width: 150,
-                      )
-                    ],
-                  )),
-                  Expanded(
-                      flex : 1,
-                      child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Contact Us at:', style: TextStyle(
-                            fontWeight: FontWeight.bold)),
-                        Text('+91 96648 29978', style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold),),
-                        Text('Shop No. 61/C, Nago Saiyaachi Chawl, RS Nimkar Marg', style: TextStyle(
-                            fontSize: 14,color: Colors.grey,)),
-                        Text('near Dalal Estate, Mumbai, Maharashtra 400008', style: TextStyle(
-                            fontSize: 14,color: Colors.grey,)),
-                      ],
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('संपर्क करें:', style: TextStyle(
+                              fontWeight: FontWeight.bold)),
+                          Text('+91 93210 25334', style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold),),
+                          Text('दुकान नंबर 61/सी, नागो सैयाची चॉल, निमकर मार्ग', style: TextStyle(
+                            fontSize: 18,color: Colors.grey,)),
+                          Text('दलाल एस्टेट के पास, मुंबई, महाराष्ट्र 400008', style: TextStyle(
+                            fontSize: 18,color: Colors.grey,)),
+                        ],
+                      ),
                     ),
-                  )),
+                    SizedBox(height: 40,),
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Contact Us at:', style: TextStyle(
+                              fontWeight: FontWeight.bold)),
+                          Text('+91 96648 29978', style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold),),
+                          Text('Shop No. 61/C, Nago Saiyaachi Chawl, RS Nimkar Marg', style: TextStyle(
+                            fontSize: 18,color: Colors.grey,)),
+                          Text('near Dalal Estate, Mumbai, Maharashtra 400008', style: TextStyle(
+                            fontSize: 18,color: Colors.grey,)),
+                        ],
+                      ),
+                    )
+                  ],))
                 ],),
+              ),
+              SizedBox(
+                height: 20,
               ),
               Text('© Copyright 2024 MK Timber & Traders Developed By Eftychia Technologies'),
               SizedBox(
