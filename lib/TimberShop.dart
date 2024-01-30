@@ -13,7 +13,16 @@ class TimberShop extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                color: Colors.redAccent,
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Colors.deepOrange,
+                        Colors.brown,
+                        Colors.black,
+                      ],
+                    )),
                 child: Row(
                   children: [
                     Container(
