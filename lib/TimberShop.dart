@@ -301,78 +301,81 @@ class TimberShop extends StatelessWidget {
               ),
             ),
 
+            GestureDetector(
+              onTap: () async {
+                String url ='https://www.google.com/maps/place/M.+K.+Timber+Traders/@18.9659052,72.8227851,18z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce6b39dae30d:0x1acde0eb16200a60!8m2!3d18.9659052!4d72.8240595!16s%2Fg%2F1pty4zzqr?authuser=3&entry=ttu';
+                final Uri uri = Uri.parse(url);
+                if (!await launchUrl(uri, mode: LaunchMode.platformDefault)) {
+                  throw Exception('Could not launch $uri');
+                }
+              },
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Image.network('https://maps.googleapis.com/maps/api/staticmap?center=18.9658861,72.8233187&zoom=16&size=96000x400&key=AIzaSyBjFqeHTgDKdst84R2Qw5T3BDbcUYq91Bg', fit: BoxFit.cover,),
+                  ClipOval(
+                    child: Image.asset(
+                      'assets/logo11.png',
+                      fit: BoxFit.cover,
+                      height: 40, width: 40,
+                    ),
+                  )
+                ],),
+            ),
 
             Container(
-              padding: EdgeInsets.only(left: 20),
               child: Row(children: [
                 Expanded(
-                    flex:12,
-                    child: GestureDetector(
-                      onTap: () async {
-                        String url ='https://www.google.com/maps/place/M.+K.+Timber+Traders/@18.9659052,72.8227851,18z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce6b39dae30d:0x1acde0eb16200a60!8m2!3d18.9659052!4d72.8240595!16s%2Fg%2F1pty4zzqr?authuser=3&entry=ttu';
-                        final Uri uri = Uri.parse(url);
-                        if (!await launchUrl(uri, mode: LaunchMode.platformDefault)) {
-                        throw Exception('Could not launch $uri');
-                        }
-                      },
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Image.network('https://maps.googleapis.com/maps/api/staticmap?center=18.9658861,72.8233187&zoom=16&size=96000x400&key=AIzaSyBjFqeHTgDKdst84R2Qw5T3BDbcUYq91Bg', fit: BoxFit.cover,),
-                          ClipOval(
-                            child: Image.asset(
-                              'assets/logo11.png',
-                              fit: BoxFit.cover,
-                              height: 40, width: 40,
-                            ),
-                          )
-                        ],),
-                    )),
-                Expanded(
-                    flex : 10,
+                    flex : 1,
                     child: Container(
-                      padding: EdgeInsets.only(right: 20),
+                      padding: EdgeInsets.only(right: 10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text('संपर्क करें:', style: TextStyle(
                               fontWeight: FontWeight.bold)),
-                          Text('+91 93210 25334', style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold),),
-                          Text('दुकान नंबर 61/सी, नागो सैयाची चॉल, निमकर मार्ग', style: TextStyle(
+                          Text('+91 93210 25334', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                          Text('दुकान नंबर 61/सी', style: TextStyle(
                             fontSize: 14,color: Colors.grey,)),
-                          Text('दलाल एस्टेट के पास, मुंबई, महाराष्ट्र 400008', style: TextStyle(
+                          Text('नागो सैयाची चॉल', style: TextStyle(
+                            fontSize: 14,color: Colors.grey,)),
+                          Text('िमकर मार्ग', style: TextStyle(
+                            fontSize: 14,color: Colors.grey,)),
+                          Text('दलाल एस्टेट के पास', style: TextStyle(
+                            fontSize: 14,color: Colors.grey,)),
+                          Text('मुंबई, महाराष्ट्र 400008', style: TextStyle(
                             fontSize: 14,color: Colors.grey,)),
                         ],
                       ),
                     )),
                 Expanded(
                     flex : 0,
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/logo11.png',
-                          fit: BoxFit.cover,
-                          height: 120, width: 120,
-                        )
-                      ],
+                    child: ClipOval(
+                      child: Image.asset(
+                        'assets/logo11.png',
+                        fit: BoxFit.cover,
+                        height: 80, width: 80,
+                      ),
                     )),
                 Expanded(
-                    flex : 10,
+                    flex : 1,
                     child: Container(
-                      padding: EdgeInsets.only(left: 20),
+                      padding: EdgeInsets.only(left: 10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('Contact Us at:', style: TextStyle(
                               fontWeight: FontWeight.bold)),
-                          Text('+91 96648 29978', style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold),),
-                          Text('Shop no.61/C, Nago Saiyaachi Chawl, Nimkar Marg', style: TextStyle(
+                          Text('+91 96648 29978', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                          Text('Shop no.61/C', style: TextStyle(
                             fontSize: 14,color: Colors.grey,)),
-                          Text('near Dalal Estate, Mumbai, Maharashtra 400008', style: TextStyle(
+                          Text('Nago Saiyaachi Chawl', style: TextStyle(
+                            fontSize: 14,color: Colors.grey,)),
+                          Text('Nimkar Marg', style: TextStyle(
+                            fontSize: 14,color: Colors.grey,)),
+                          Text('near Dalal Estate', style: TextStyle(
+                            fontSize: 14,color: Colors.grey,)),
+                          Text('Mumbai 400008', style: TextStyle(
                             fontSize: 14,color: Colors.grey,)),
                         ],
                       ),
@@ -380,9 +383,9 @@ class TimberShop extends StatelessWidget {
               ],),
             ),
             SizedBox(
-              height: 20,
+              height: 40,
             ),
-            Text('© Copyright 2024 MK Timber Traders Website Developed By Eftychia Technologies PVT LTD', style: TextStyle(color: Colors.grey),),
+            Text('© Copyright 2024 MK Timber Traders Website Developed By Eftychia Technologies PVT LTD', style: TextStyle(color: Colors.grey),textAlign: TextAlign.center,),
             SizedBox(
               height: 20,
             )
