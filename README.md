@@ -1,6 +1,6 @@
-# timber
+# Mk Timber Traders
 
-A new Flutter project.
+One-Stop Shop for all your timber needs.
 
 ## Getting Started
 

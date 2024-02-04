@@ -18,9 +18,9 @@ class TimberShop extends StatelessWidget {
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [
+                        Colors.black,
                         Colors.deepOrange,
                         Colors.brown,
-                        Colors.black,
                       ],
                     )),
                 child: Row(
