@@ -175,168 +175,128 @@ class TimberShop extends StatelessWidget {
             ),
             Container(
               color: Colors.brown,
-              child: Row(
+              child: Column(
                 children: [
-                  Expanded(
-                      flex: 1,
-                      child: Container(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 20, vertical: 20),
-                        child: Image.network(
-                            'https://rukminim2.flixcart.com/image/850/1000/kw2fki80/plant-seed/v/j/g/50-teak-wood-tectona-grandis-sagwan-tree-seeds-for-kitchen-original-imag8tveqnt3akey.jpeg?q=20&crop=false'),
-                      )),
-                  Expanded(
-                      flex: 1,
-                      child: Container(
-                        padding: EdgeInsets.all(20),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Our Speciality : Teak Wood',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text('We Suggest best for construction',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold)),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              'We are a leading provider of high-quality wood & timber products, including Burma teak wood and Pine. Our passion for delivering the best products to our customers is at the heart of everything we do.',
-                              style: TextStyle(
-                                  color: Colors.white, fontSize: 20),
-                              textAlign: TextAlign.justify,
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            ElevatedButton(
-                                onPressed: () {},
-                                child: Container(
-                                  padding: EdgeInsets.all(20),
-                                  child: Text('Know More',
-                                      style: TextStyle(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.bold)),
-                                ))
-                          ],
+                  Container(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
+                    child: Image.network(
+                        'https://rukminim2.flixcart.com/image/850/1000/kw2fki80/plant-seed/v/j/g/50-teak-wood-tectona-grandis-sagwan-tree-seeds-for-kitchen-original-imag8tveqnt3akey.jpeg?q=20&crop=false'),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Our Speciality : Teak Wood',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold),
                         ),
-                      )),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('We Suggest best for construction',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold)),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          'We are a leading provider of high-quality wood & timber products, including Burma teak wood and Pine. Our passion for delivering the best products to our customers is at the heart of everything we do.',
+                          style: TextStyle(
+                              color: Colors.white, fontSize: 20),
+                          textAlign: TextAlign.justify,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        ElevatedButton(
+                            onPressed: () {},
+                            child: Container(
+                              padding: EdgeInsets.all(20),
+                              child: Text('Know More',
+                                  style: TextStyle(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold)),
+                            ))
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
-
-
             SizedBox(height: 30,),
             Text('We also offer', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
             Container(
               padding: EdgeInsets.only(
                   left: 100, right: 100, bottom: 100, top: 40),
-              child: Row(
+              child: Column(
                 children: [
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Container(
-                          child: AspectRatio(
-                              aspectRatio: 1,
-                              child: Image.network('https://5.imimg.com/data5/FP/HT/YI/SELLER-45564442/kapur-wood.jpg')),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text(
-                          'Kapur',
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
-                    flex: 1,
+                  Container(
+                    child: AspectRatio(
+                        aspectRatio: 1,
+                        child: Image.network('https://5.imimg.com/data5/FP/HT/YI/SELLER-45564442/kapur-wood.jpg')),
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        AspectRatio(
-                          aspectRatio: 1,
-                          child: Image.network(
-                            'https://m.media-amazon.com/images/I/4107mc8TEcL._AC_UF894,1000_QL80_.jpg',
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text('White Oak',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold))
-                      ],
-                    ),
-                    flex: 1,
+                  SizedBox(
+                    height: 20,
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        AspectRatio(
-                          aspectRatio: 1,
-                          child: Image.network(
-                            'https://www.tradeindia.com/_next/image/?url=https%3A%2F%2Ftiimg.tistatic.com%2Ffp%2F1%2F007%2F939%2Fsolid-old-burma-teak-wood-3-inch-756.jpg&w=750&q=75',
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text('Old Burma',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold))
-                      ],
-                    ),
-                    flex: 1,
+                  Text(
+                    'Kapur',
+                    style: TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        AspectRatio(
-                          aspectRatio: 1,
-                          child: Image.network(
-                            'https://5.imimg.com/data5/MH/ME/OP/SELLER-1452729/natural-pine-wood.jpg',
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text('Pine',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold))
-                      ],
+
+
+                  AspectRatio(
+                    aspectRatio: 1,
+                    child: Image.network(
+                      'https://m.media-amazon.com/images/I/4107mc8TEcL._AC_UF894,1000_QL80_.jpg',
                     ),
-                    flex: 1,
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        GestureDetector(
-                            onTap:() async {
-                              String url ='https://www.google.com/maps/place/M.+K.+Timber+Traders/@18.9659052,72.8227851,18z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce6b39dae30d:0x1acde0eb16200a60!8m2!3d18.9659052!4d72.8240595!16s%2Fg%2F1pty4zzqr?authuser=3&entry=ttu';
-                              final Uri uri = Uri.parse(url);
-                              if (!await launchUrl(uri, mode: LaunchMode.platformDefault)) {
-                                throw Exception('Could not launch $uri');
-                              }
-                            },
-                            child: Image.asset('assets/woods.png'))
-                      ],
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text('White Oak',
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold)),
+
+
+                  AspectRatio(
+                    aspectRatio: 1,
+                    child: Image.network(
+                      'https://www.tradeindia.com/_next/image/?url=https%3A%2F%2Ftiimg.tistatic.com%2Ffp%2F1%2F007%2F939%2Fsolid-old-burma-teak-wood-3-inch-756.jpg&w=750&q=75',
                     ),
-                    flex: 4,
-                  )
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text('Old Burma',
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold))
+
+                  ,
+
+                  AspectRatio(
+                    aspectRatio: 1,
+                    child: Image.network(
+                      'https://5.imimg.com/data5/MH/ME/OP/SELLER-1452729/natural-pine-wood.jpg',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text('Pine',
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold))
+                  ,
+                  Image.asset('assets/woods.png'),
+
                 ],
               ),
             ),
@@ -347,18 +307,27 @@ class TimberShop extends StatelessWidget {
               child: Row(children: [
                 Expanded(
                     flex:12,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Image.network('https://maps.googleapis.com/maps/api/staticmap?center=18.9658861,72.8233187&zoom=16&size=96000x400&key=AIzaSyBjFqeHTgDKdst84R2Qw5T3BDbcUYq91Bg', fit: BoxFit.cover,),
-                        ClipOval(
-                          child: Image.asset(
-                            'assets/logo11.png',
-                            fit: BoxFit.cover,
-                            height: 40, width: 40,
-                          ),
-                        )
-                      ],)),
+                    child: GestureDetector(
+                      onTap: () async {
+                        String url ='https://www.google.com/maps/place/M.+K.+Timber+Traders/@18.9659052,72.8227851,18z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce6b39dae30d:0x1acde0eb16200a60!8m2!3d18.9659052!4d72.8240595!16s%2Fg%2F1pty4zzqr?authuser=3&entry=ttu';
+                        final Uri uri = Uri.parse(url);
+                        if (!await launchUrl(uri, mode: LaunchMode.platformDefault)) {
+                        throw Exception('Could not launch $uri');
+                        }
+                      },
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Image.network('https://maps.googleapis.com/maps/api/staticmap?center=18.9658861,72.8233187&zoom=16&size=96000x400&key=AIzaSyBjFqeHTgDKdst84R2Qw5T3BDbcUYq91Bg', fit: BoxFit.cover,),
+                          ClipOval(
+                            child: Image.asset(
+                              'assets/logo11.png',
+                              fit: BoxFit.cover,
+                              height: 40, width: 40,
+                            ),
+                          )
+                        ],),
+                    )),
                 Expanded(
                     flex : 10,
                     child: Container(
