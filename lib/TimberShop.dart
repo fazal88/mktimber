@@ -15,13 +15,14 @@ class TimberShop extends StatelessWidget {
     );
   }
 
-  getMobileUi() {
+  Widget getMobileUi() {
     return SingleChildScrollView(
       child: Container(
         color: Colors.white,
         child: Column(
           children: [
             Container(
+              width: double.maxFinite,
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topLeft,
@@ -32,7 +33,7 @@ class TimberShop extends StatelessWidget {
                       Colors.brown,
                     ],
                   )),
-              child: Row(
+              child: Column(
                 children: [
                   Container(
                     padding:
@@ -43,64 +44,57 @@ class TimberShop extends StatelessWidget {
                       width: 300,
                     ),
                   ),
-                  Expanded(
-                      child: Container(
-                        height: 120,
-                        margin: EdgeInsets.only(right: 100),
-                        color: Color(0xDD000000),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'One-Stop Shop for all your timber needs.',
-                          style: TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.w100,
-                              color: Colors.white),
-                        ),
-                      ))
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    color: Color(0xDD000000),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'One-Stop Shop for all your timber needs.',
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w100,
+                          color: Colors.white,),
+                      textAlign: TextAlign.center,
+                    ),
+                  )
                 ],
               ),
             ),
-            Container(
-              child: Stack(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: EdgeInsets.all(10),
-                          height: 250,
-                          child: Image.asset(
-                            'assets/banner1.jpeg',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: EdgeInsets.all(10),
-                          height: 250,
-                          child: Image.asset(
-                            'assets/banner2.jpeg',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                          flex: 1,
-                          child: Container(
-                            padding: EdgeInsets.all(10),
-                            height: 250,
-                            child: Image.asset(
-                              'assets/banner4.png',
-                              fit: BoxFit.cover,
-                            ),
-                          )),
-                    ],
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    height: 250,
+                    child: Image.asset(
+                      'assets/banner1.jpeg',
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ],
-              ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    height: 250,
+                    child: Image.asset(
+                      'assets/banner2.jpeg',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      height: 250,
+                      child: Image.asset(
+                        'assets/banner4.png',
+                        fit: BoxFit.cover,
+                      ),
+                    )),
+              ],
             ),
             SizedBox(
               height: 30,
@@ -108,105 +102,73 @@ class TimberShop extends StatelessWidget {
             Text('We Provide',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
             Container(
-              padding: EdgeInsets.only(
-                  left: 100, right: 100, bottom: 100, top: 40),
-              child: Row(
+              padding: EdgeInsets.only(left: 100, right: 100, bottom: 100, top: 40),
+              child: Column(
                 children: [
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Container(
-                          child: AspectRatio(
-                              aspectRatio: 2,
-                              child: Image.asset('honesty.png')),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text(
-                          'Honesty',
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
-                    flex: 1,
+                  Container(
+                    child: AspectRatio(
+                        aspectRatio: 2,
+                        child: Image.asset('honesty.png')),
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        AspectRatio(
-                          aspectRatio: 2,
-                          child: Image.asset(
-                            'quality.png',
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text('Quality',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold))
-                      ],
-                    ),
-                    flex: 1,
+                  Text(
+                    'Honesty',
+                    style: TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        AspectRatio(
-                          aspectRatio: 2,
-                          child: Image.asset(
-                            'reliability.png',
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text('Reliability',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold))
-                      ],
-                    ),
-                    flex: 1,
+                  SizedBox(
+                    height: 50,
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        AspectRatio(
-                          aspectRatio: 2,
-                          child: Image.asset(
-                            'tradition.png',
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text('Tradition',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold))
-                      ],
+
+                  AspectRatio(
+                    aspectRatio: 2,
+                    child: Image.asset(
+                      'quality.png',
                     ),
-                    flex: 1,
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        AspectRatio(
-                          aspectRatio: 2,
-                          child: Image.asset(
-                            'delivery.png',
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text('Fast Delivery',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold))
-                      ],
+                  Text('Quality',
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold)),
+
+                  SizedBox(
+                    height: 50,
+                  ),
+                  AspectRatio(
+                    aspectRatio: 2,
+                    child: Image.asset(
+                      'reliability.png',
                     ),
-                    flex: 1,
+                  ),
+                  Text('Reliability',
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    height: 50,
+                  ),
+
+                  AspectRatio(
+                    aspectRatio: 2,
+                    child: Image.asset(
+                      'tradition.png',
+                    ),
+                  ),
+                  Text('Tradition',
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    height: 50,
+                  ),
+
+                  AspectRatio(
+                    aspectRatio: 2,
+                    child: Image.asset(
+                      'delivery.png',
+                    ),
+                  ),
+                  Text('Fast Delivery',
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    height: 50,
                   ),
                 ],
               ),
@@ -461,7 +423,7 @@ class TimberShop extends StatelessWidget {
     );
   }
 
-  getDesktopUi() {
+  Widget getDesktopUi() {
     return SingleChildScrollView(
       child: Container(
         color: Colors.white,
