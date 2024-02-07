@@ -234,8 +234,6 @@ class TimberShop extends StatelessWidget {
             SizedBox(height: 30,),
             Text('We also offer', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
             Container(
-              padding: EdgeInsets.only(
-                  left: 100, right: 100, bottom: 100, top: 40),
               child: Column(
                 children: [
                   Container(
@@ -243,15 +241,6 @@ class TimberShop extends StatelessWidget {
                         aspectRatio: 1,
                         child: Image.network('https://5.imimg.com/data5/FP/HT/YI/SELLER-45564442/kapur-wood.jpg')),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'Kapur',
-                    style: TextStyle(
-                        fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-
 
                   AspectRatio(
                     aspectRatio: 1,
@@ -259,13 +248,6 @@ class TimberShop extends StatelessWidget {
                       'https://m.media-amazon.com/images/I/4107mc8TEcL._AC_UF894,1000_QL80_.jpg',
                     ),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text('White Oak',
-                      style: TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold)),
-
 
                   AspectRatio(
                     aspectRatio: 1,
@@ -273,28 +255,12 @@ class TimberShop extends StatelessWidget {
                       'https://www.tradeindia.com/_next/image/?url=https%3A%2F%2Ftiimg.tistatic.com%2Ffp%2F1%2F007%2F939%2Fsolid-old-burma-teak-wood-3-inch-756.jpg&w=750&q=75',
                     ),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text('Old Burma',
-                      style: TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold))
-
-                  ,
-
                   AspectRatio(
                     aspectRatio: 1,
                     child: Image.network(
                       'https://5.imimg.com/data5/MH/ME/OP/SELLER-1452729/natural-pine-wood.jpg',
                     ),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text('Pine',
-                      style: TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold))
-                  ,
                   Image.asset('assets/woods.png'),
 
                 ],
